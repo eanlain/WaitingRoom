@@ -23,8 +23,8 @@ The other functions of the WaitingRoom module can be used separately if given th
 $ python
 >> import waitingroom
 >> wr = waitingroom.WaitingRoom(api_key)
->> alerts={"sms": "Hello World"};
->> recipients=[{"name": {"first": "John", "last": "Doe"}, "mobile": "5551234567"}];
+>> alerts={"sms": "Hello World"}
+>> recipients=[{"name": {"first": "John", "last": "Doe"}, "mobile": "5551234567"}]
 >> wr.simple(alerts, recipients)
 ```
 
