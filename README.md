@@ -28,5 +28,12 @@ $ python
 >> wr.simple(alerts, recipients)
 ```
 
+### Sending an alert to multiple recipients
+Recipients is an array of objects, just pass in the "name" object along with any additional/required objects (i.e. "mobile").
+```console
+>> recipients=[{"name": {"first": "John", "last": "Doe"}, "mobile": "5551234567"}, {"name": {"first": "Jane", "last": "Doe"}, "mobile": "5559876543"}]
+>> wr.simple(alerts, recipients)
+```
+
 ## Notes
 Recipients first and last name need to be set for an alert to successfully be created and sent out
