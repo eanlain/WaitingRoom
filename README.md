@@ -28,6 +28,16 @@ $ python
 >> wr.simple(alerts, recipients)
 ```
 
+### Sending an email alert
+```console
+$ python
+>> import waitingroom
+>> wr = waitingroom.WaitingRoom(api_key)
+>> alerts={"email": {"subject": "Some Subject Here", "body": "<strong>Hello World</strong><p>This is a test...</p>"}}
+>> recipients=[{"name": {"first": "John", "last": "Doe"}, "email": "john@example.com"}]
+>> wr.simple(alerts, recipients)
+```
+
 ### Sending an alert to multiple recipients
 Recipients is an array of objects, just pass in the "name" object along with any additional/required objects (i.e. "mobile").
 ```console
@@ -36,4 +46,6 @@ Recipients is an array of objects, just pass in the "name" object along with any
 ```
 
 ## Notes
+You need to initialize the module with an API key as a string (i.e. “009e006beQ7aoPL1" instead of `apikey` in the examples), so be sure to grab one from http://developer.alertcaster.com/developer/apikey
+
 Recipients first and last name need to be set for an alert to successfully be created and sent out
