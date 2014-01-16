@@ -73,6 +73,8 @@ class WaitingRoom(object):
 
       if 'sms' in alerts:
         data['recipient[%s][mobile]' % index] = rec['mobile']
+      elif 'audio' in alerts:
+        data['recipient[%s][mobile]' % index] = rec['mobile']
 
     if 'email' in alerts:
       data['email-subject'] = alerts['email']['subject']
